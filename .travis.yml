@@ -12,3 +12,4 @@ deploy:
   on:
     repo: karlding/travisci-tag-deploy-test
     tags: true
+  skip_cleanup: true
