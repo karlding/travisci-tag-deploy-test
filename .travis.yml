@@ -2,3 +2,13 @@ language: c
 
 script:
   - make
+
+deploy:
+  provider: releases
+  api_key:
+    secure: nLKVTl9ba6sbKuCA/26h4qAlLSsOY5EHy5wfhfCQBKKZpHbgS4sc2weB2clUB/3NoSqXxVWktvnKLEUp5JLsFcW7p7A7IQ0ZMf8wkELHGWR6X6qYTguHYU1Bz8hnfK108PCEdQ+andQCRPTtc5gT26bSOrOgn0w7skz5iMukQo0qU7BGcyeYBM2PkahtpnwMGq9YlXjErPk2oj34wwpK2QvqJ2caESvbqcCbgqgEOcBZi40fN0kYiURvdF+fRIhuXCNIPU0MyxrEoST2Q8w8o1pHQzdxJqGYI7zVqsvoOjleJ1NFjKg1n8JNNrKGR0vyXrlbnN+OmdBENc94t2uLAJ1wd57/zIvtWEyqz9EUgb5+3XcfRRAUjjkXuz4fk2dq8YF/ygNwkpC6bKoPoJgpFGQG2Z+8sgOcjwg8t9pWt5CPHT+hbnZ/SJsoFbjHPkr2Bba0nnYaOmMk1sI2t/cSQ7p5cEHnqgJ1uBNh0mHfarOqyS5iCzBcCLB081VAX8FwgiaP2s2NKAJOKKnO3Mc5wR76hpLvyfmcDUO0IeZOC9KmCxYMaGG80EWummuQWTIgh822AuqEbG1wTgkVIhnAoPj5gpHpJteJKr1Dk0/I/g6PmWnngwwYPXhsp8P3bPfO4B+MjHhyQbBWy57Zq8j5atvh0fG1Q0VBzXJLTzZmICw=
+  file:
+    - bin/HelloWorld
+  on:
+    repo: karlding/travisci-tag-deploy-test
+    tags: true
