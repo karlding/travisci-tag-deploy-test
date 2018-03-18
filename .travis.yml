@@ -1,5 +1,17 @@
 language: c
 
+# enable "Build pushes" and "Build pull requests" in Travis CI
+# - pull requests will always be built
+# - only build pushes to master
+branches:
+  only:
+    - master
+    - /^v(?:0|[1-9]\d*)\.(?:0|[1-9]\d*)\.(?:0|[1-9]\d*)/
+
+compiler:
+  - clang
+  - gcc
+
 script:
   - make
 
